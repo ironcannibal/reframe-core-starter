@@ -2,6 +2,8 @@
 
 **A personal business operating system, running on Claude Code.**
 
+*Powered by Business Reframing™ / Fresh Start Marketing.*
+
 Reframe Core turns a fresh Claude Code project into a system that knows your business, reaches your tools, does real work, and eventually runs without being asked. You personalize it with a short `/onboard` interview, then use two recurring thinking skills (`/audit`, `/level-up`) to build leverage week over week.
 
 Originally based on Nate Herk's open-source **AIS-OS** starter kit (AI Automation Society OS). The **Three Ms** framework ships here as Nate's, with attribution; the **Four Pillars** architecture is an evolution of his Four Cs of an AIOS™, credited to him as the origin (see the license note at the bottom).
@@ -107,6 +109,6 @@ See `EXPANSIONS.md` for what to add as you grow.
 
 ## License + attribution
 
-Built on Nate Herk's MIT-licensed AIS-OS starter kit. MIT License. © 2026 Nate Herk.
+This kit is assembled and distributed by **Fresh Start Marketing** as part of the **Business Reframing™** practice. Built on Nate Herk's MIT-licensed AIS-OS starter kit. MIT License. © 2026 Nate Herk.
 
 The Three Ms of AI™ and The Four Cs of an AIOS™ are trademarks of Nate Herk. The **Three Ms** ship here as Nate's framework, attributed. The **Four Pillars** are an architecture model evolved from Nate's Four Cs and credited to him as the origin. Use freely; credit honestly.

@@ -15,11 +15,11 @@ Read `references/3ms-framework.md` once. It's a way of thinking about AI work. M
 
 Every build decision passes through three lenses, at design time, not as an afterthought. They're the discipline that separates serious AI work from cheap AI implementation. If a proposal doesn't address all three, it isn't done.
 
-1. **Security** — threat model, secrets handling (secrets live in Doppler, never in `.env` ... see `references/doppler-secrets.md`), failure modes, attack surface.
-2. **Ethics** — who could be harmed, disclosure, human-in-the-loop, honesty, minimization.
-3. **Privacy** — data inventory, consent, subject rights, retention, decommissioning, breach response.
+1. **Security** — threat model, secrets handling (secrets live in Doppler, never in `.env` ... see `references/doppler-secrets.md`), failure modes, attack surface. Untrusted text reaching an LLM: see `references/prompt-injection-sop.md`.
+2. **Ethics** — who could be harmed, disclosure, human-in-the-loop, honesty, minimization. See `references/ai-ethics-sop.md`; paste its section-4 checklist into every PRD.
+3. **Privacy** — data inventory, consent, subject rights, retention, decommissioning, breach response. See `references/privacy-sop.md`.
 
-The cornerstones ship ON by default (set during `/onboard`). As your practice matures, capture each as its own SOP in `references/` via `/sop` and have `/sop` attach the matching checklist whenever a process touches that domain.
+The cornerstones ship ON by default (set during `/onboard`). The three SOPs above are starter templates ... fill them in for your business, and have `/sop` attach the matching checklist whenever a process touches that domain.
 
 ## Your architecture — the Four Pillars
 
@@ -75,3 +75,7 @@ Run `/onboard` to scaffold `connections.md` across the 7 universal data domains.
 - **Default Shift:** when I bring a new task, ask "to what extent could AI be leveraged here?" before assuming I'll do it the old way.
 - Bias toward concrete next actions and small reversible bets over option-menus and analysis. Push me to ship.
 - **Never execute destructive commands without explicit in-the-moment confirmation.** Before running anything that deletes, overwrites, force-pushes, drops, truncates, revokes, or otherwise removes state, state exactly what will be destroyed and wait for an explicit "yes." Permission for one action does NOT extend to repeats ... re-confirm every time.
+
+---
+
+> *Powered by Business Reframing™ / Fresh Start Marketing. Built on Nate Herk's MIT-licensed AIS-OS; the Three Ms are Nate's, the Four Pillars evolved from his Four Cs.*
