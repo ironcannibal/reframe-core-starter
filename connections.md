@@ -20,6 +20,16 @@ Aim for coverage across these. One reachable connection per domain is the Day-1 
 
 **Mechanism options:** `mcp` (MCP server), `cli` (CLI binary on disk), `script` (Python/Bash hitting an API, in `scripts/`), `export` (CSV/JSON dump pipeline), `key+ref` (Doppler-stored key + `references/{tool}-api.md` guide), `not yet connected`.
 
+## Second Brain (optional knowledge vault)
+
+The long-term knowledge layer, separate from the 7 operational domains above. Optional — run `/second-brain` to learn the concept and set one up. Config lives in `context/second-brain.md`.
+
+| Domain | Tool | Mechanism | Status | Last checked |
+|---|---|---|---|---|
+| Knowledge vault | | not yet connected | ○ | — |
+
+*Status flips to `✓` when `/second-brain` records a vault. Type `markdown`/`obsidian` → full `/vault-lint` support; `gdrive`/`notion` → continuity only, no automated lint.*
+
 The kit is API-first: prefer a direct CLI or API call (with the key in Doppler ... see [references/doppler-secrets.md](references/doppler-secrets.md)) over heavier middleware, and reach for an MCP only when there's no API path.
 
 When you wire a new tool, also save `references/{tool}-api.md` capturing endpoints, auth flow, and common queries (use [references/api-setup-template.md](references/api-setup-template.md)) ... researched once, saved forever.

@@ -1,6 +1,6 @@
 # EXPANSIONS — what to add as you grow
 
-The kit ships lean on purpose. Three skills, six folders, one framework reference. That's it. As you use it, you'll outgrow the base — this guide tells you what to add, when, and why.
+The kit ships lean on purpose. A small set of skills, six folders, one framework reference, and an optional Second Brain module (off until you run `/second-brain`). That's it. As you use it, you'll outgrow the base — this guide tells you what to add, when, and why.
 
 The Reframe Core structure should look like a small, well-run business. Not a hoarder's basement.
 
@@ -15,7 +15,8 @@ The Reframe Core structure should look like a small, well-run business. Not a ho
 | `decisions/log.md` | Append-only record of what was decided and why. |
 | `archives/` | Old files. Don't delete — move here. |
 | `connections.md` | Registry of every system your Reframe Core can reach. |
-| `.claude/skills/` | Your skills: `/onboard`, `/audit`, `/level-up`. Add more via `/level-up`. |
+| `.claude/skills/` | Your skills: `/onboard`, `/audit`, `/level-up`, `/sop`, `/roast`, plus the optional Second Brain trio (`/second-brain`, `/close-session`, `/vault-lint`). Add more via `/level-up`. |
+| `context/second-brain.md` | Written by `/second-brain` if you install a knowledge vault. Absent (and the vault skills stay dormant) until then. |
 | `aios-intake.md` | Source-of-truth for `/onboard`. Edit and re-run any time. |
 | `CLAUDE.md` | Root operating manual. Filled by `/onboard`. Edit when your role/voice changes. |
 

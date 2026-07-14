@@ -96,7 +96,11 @@ Print one screen. Three lines max:
 Today: ask me — "what should I focus on this week?"
 Tomorrow: pick one tool from connections.md and wire it up (manual MCP install or write a small API script + save references/{tool}-api.md).
 Day 7: run /audit to see your score.
+
+Optional: want your knowledge and session history to persist and compound? Run /second-brain — it explains the idea, compares the options, and sets one up only if you want it. No pressure; the kit works fine without it.
 ```
+
+Mention `/second-brain` once, as the optional line above — don't push it. If the operator clearly has real accumulated knowledge to organize or asks about persistence, nudge a little harder; otherwise leave it as an offer.
 
 When the user runs the closing prompt ("what should I focus on this week?"), respond using only the new context files. Hit:
 - 3-bullet priority list, in their voice register from Q2

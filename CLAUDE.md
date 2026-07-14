@@ -42,6 +42,10 @@ The three cornerstones are the trust band that runs through all four. `/audit` s
 - `/audit` — Four Pillars gap report. Run on Day 7, then weekly. Watch your score climb.
 - `/level-up` — Weekly 3Ms interview. Find one automation, scope it, ship it. One per week.
 - `/sop` — Draft a structured SOP from a free-form description.
+- `/roast` — Convene a 5-persona council to stress-test an idea, then one GO / RESHAPE / KILL verdict. Use before building the wrong thing.
+- `/second-brain` — Optional. Learn what a knowledge vault is, compare the options, and (if you want) install one. Turns on the two skills below.
+- `/close-session` — End-of-session save. Routes decisions and durable facts to your Second Brain vault (if set up) or to `decisions/log.md` + `context/`.
+- `/vault-lint` — Health check for a markdown/Obsidian Second Brain (orphans, broken links, contradictions). No-ops if no vault is configured.
 
 ## Where things live
 
@@ -52,6 +56,17 @@ The three cornerstones are the trust band that runs through all four. `/audit` s
 - `archives/` — old stuff. Don't delete. Move here.
 
 See `EXPANSIONS.md` for what to add as you grow.
+
+## Second Brain (optional)
+
+A **Second Brain** is a long-term knowledge vault the Reframe Core reads and writes — the place durable facts and session history live so they compound instead of evaporating. It's optional: everything here works without one. Run `/second-brain` to learn the concept, compare options (plain markdown, Obsidian, Google Drive, Notion), and set one up.
+
+**If a vault is configured** (`context/second-brain.md` exists with `installed: true`), two rules apply:
+
+- **Lookup order:** (1) this file + memory first — always loaded. (2) Anything not covered here, check the vault. (3) Only then the web for general/external knowledge. The goal: memory and this file hold *pointers* to where things live, not the things themselves.
+- **Session continuity lives in the vault, not memory.** At the end of a substantive session, `/close-session` appends a short entry (decisions, lessons, next steps) to the vault log and updates the standing profile page directly — instead of spawning parallel memory files. Memory holds pointers; the content belongs in the vault.
+
+If no vault is configured, ignore this section — decisions go to `decisions/log.md` and durable facts to `context/`.
 
 ## Knowledge base
 

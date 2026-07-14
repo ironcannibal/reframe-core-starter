@@ -120,3 +120,5 @@ Work tracking (current state):
 ---
 
 When this file is filled, run `/onboard` (or re-run it) and the wizard will scaffold your Day-1 file set: `context/`, `references/voice.md`, populated `connections.md`, and a filled `CLAUDE.md`.
+
+**Optional, after onboarding:** run `/second-brain` if you want a long-term knowledge vault (session history + durable facts that compound instead of resetting each chat). It explains the idea, compares the options, and installs one only if you want it. Not a question here — it's a separate, no-pressure step. The kit works fully without it.
