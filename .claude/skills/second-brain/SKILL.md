@@ -30,29 +30,29 @@ Then ask if they want the options, or already know they want one.
 
 ## Step 2: Lay out the options (with honest pros/cons)
 
-Present these four. Match to the person: non-technical → markdown folder or Google Drive; already-organized notetaker → Obsidian or Notion.
+**This module is built for Obsidian.** Lead with that. The two vault skills (`/close-session`, `/vault-lint`) are Obsidian/markdown-native — they work out of the box on a local markdown vault and don't on anything else. There are two support tiers; be upfront about which is which.
 
-**1. Plain markdown folder** (simplest)
-- **Pros:** Zero install. Just a folder of `.md` files. Fully local, fully private, works with every tool here including `/vault-lint`. Portable forever.
-- **Cons:** No fancy UI, no graph view, no mobile app. You edit in whatever text editor you like.
-- **Best for:** Anyone who wants the benefits with no new software.
+### Tier A — fully supported (local markdown, automation ON)
 
-**2. Obsidian** (recommended for most)
-- **Pros:** Free. It's *also* just a folder of markdown files, so `/vault-lint` works natively. Adds `[[wikilinks]]`, a graph view, backlinks, plugins, mobile app. Local-first (private by default).
-- **Cons:** A real app to learn. Slight overkill if you'll only ever keep a handful of notes.
-- **Best for:** Operators who want their knowledge to feel like a connected web and will actually tend it.
+**1. Obsidian** ⭐ *recommended*
+- **Pros:** Free. It's a folder of plain markdown files, so `/close-session` and `/vault-lint` work natively with zero extra wiring. Adds `[[wikilinks]]`, graph view, backlinks, plugins, mobile app. Local-first, private by default. It's what this whole module was designed around.
+- **Cons:** A real app to learn (not much — it's basically a notes folder with superpowers).
+- **Best for:** Almost everyone. This is the default recommendation. Free, private, and the automation just works.
 
-**3. Google Drive** (if you already live there)
-- **Pros:** Already in your stack, synced everywhere, sharable. The Reframe Core can reach it via the Google Drive MCP.
-- **Cons:** Not markdown-native (Google Docs), so the automated `/vault-lint` link/orphan scan doesn't apply the same way. Continuity works; the structural lint is manual.
-- **Best for:** People whose docs already live in Drive and who don't want a new tool.
+**2. Plain markdown folder** (even lighter)
+- **Pros:** Zero install. Just a folder of `.md` files. Same full automation support as Obsidian (it's the same format). Fully local and private.
+- **Cons:** No UI, graph, or mobile app — you edit in whatever text editor you like. You can point Obsidian at this same folder later and lose nothing.
+- **Best for:** People who want the benefits with no new software at all.
 
-**4. Notion** (if you already live there)
-- **Pros:** Great UI, databases, already popular. Sharable and multiplayer.
-- **Cons:** Not local markdown, needs API wiring for the Reframe Core to read/write, and `/vault-lint`'s automated scan doesn't apply. Lock-in risk (export is clunky).
-- **Best for:** Teams already standardized on Notion.
+### Tier B — store only, automation OFF (build-your-own)
 
-**The honest default:** if they have no strong preference, recommend **Obsidian** (free, markdown-native, full tool support) or a **plain markdown folder** if they want zero new software. Flag clearly that Drive/Notion give continuity but not the automated lint.
+**3. Google Drive / 4. Notion** (only if they already live there and won't switch)
+- **What works:** You can keep a knowledge store there. The Reframe Core can *read* Drive via MCP.
+- **What does NOT:** `/close-session` and `/vault-lint` are Obsidian/markdown-native and stay **disabled** for these — they won't run. Drive is Google Docs (not markdown); Notion needs API wiring and its export is clunky (lock-in risk).
+- **The deal:** You get the concept, not the built-in automation. If you want session-save and lint on Drive/Notion, you'd build your own versions (the existing skills are a clear template to copy). This skill will record the choice and tell the vault skills to stand down.
+- **Best for:** People locked into Drive/Notion who accept DIY automation.
+
+**The honest default:** recommend **Obsidian** unless they have a strong reason not to — free, private, markdown-native, full automation. Plain markdown if they want zero new software. Only route to Drive/Notion if they insist, and be clear the vault automation is off and DIY from there.
 
 ## Step 3: Install now, or wait?
 
@@ -82,37 +82,46 @@ Create `context/second-brain.md` with this exact frontmatter shape (the two depe
 ```markdown
 ---
 installed: true
-type: markdown | obsidian | gdrive | notion
+type: obsidian | markdown | gdrive | notion
 vault_path: <absolute path to the vault, or Drive folder / Notion workspace name>
 log_file: log.md
 standing_page: profile.md
-lint_supported: true   # true for local markdown/obsidian; false for gdrive/notion
+vault_automation: enabled   # enabled ONLY for obsidian/markdown; disabled for gdrive/notion
 ---
 
 # Second Brain — config
 
 This file tells the Reframe Core where your knowledge vault lives.
-`/close-session` writes session history here; `/vault-lint` checks its health.
+When `vault_automation: enabled`, `/close-session` writes session history here
+and `/vault-lint` checks its health. When `disabled` (Drive/Notion), both vault
+skills stand down and you build your own if you want them.
 Edit the frontmatter above if the vault ever moves.
 ```
 
-Set `lint_supported: true` only for `markdown` and `obsidian` (local folders the lint script can walk). For `gdrive`/`notion`, set it `false` — continuity works, automated structural lint does not.
+Set `vault_automation: enabled` **only** for `obsidian` and `markdown` (local folders the skills natively support). For `gdrive`/`notion`, set it `disabled` — the vault skills won't run, and that's by design.
 
 Then update `connections.md`: Second Brain row → status `✓`, mechanism matching the type.
 
 ## Step 6: Confirm and hand off
 
-Short recap. Three things:
+Short recap. Match it to the tier they chose.
+
+**Tier A (Obsidian / markdown):**
 - Where the vault lives and what got created.
 - That `/close-session` will now save to it at the end of sessions.
-- That `/vault-lint` will check it (or, for Drive/Notion, that lint is manual for now).
+- That `/vault-lint` will check its health.
+- Next step: *"Run a session, then try `/close-session` to see it capture what happened."*
 
-Suggest the natural next step: *"Run a session, then try `/close-session` to see it capture what happened."*
+**Tier B (Drive / Notion):**
+- Where the store lives, and that the choice is recorded.
+- Plainly: the built-in vault skills (`/close-session`, `/vault-lint`) are **off** for this type — they're Obsidian/markdown-native.
+- If they want that automation, the existing skills are a template to copy and adapt to their store (or switch to Obsidian any time and it all turns on).
 
 ## Rules
 
 - **Optional means optional.** If they hesitate, default to "wait." Never make someone feel behind for not having a second brain.
+- **Obsidian is the recommendation.** Free, private, markdown-native, full automation. Steer there unless they have a real reason not to.
 - **Confirm before creating files or folders on disk.** State the exact path, wait for yes.
-- **Honesty about lint.** Don't imply Drive/Notion get the automated `/vault-lint` scan. They get continuity; the structural lint is markdown/Obsidian only.
+- **No false promises on Drive/Notion.** Never imply they get `/close-session` or `/vault-lint`. State clearly the automation is off and DIY. `vault_automation: disabled` in the config enforces it.
 - **One config file.** Everything routes through `context/second-brain.md`. Don't scatter paths across skills.
 - **Re-runnable.** `/second-brain status` reports the current config; `/second-brain` again lets them change or remove it.

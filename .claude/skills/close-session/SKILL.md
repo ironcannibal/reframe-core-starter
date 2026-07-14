@@ -36,8 +36,9 @@ Scan the conversation for:
 
 Read `context/second-brain.md`.
 
-- **If it exists and `installed: true`** → note the `vault_path`, `log_file`, and `standing_page`. Proceed with the vault path (Step 3a).
-- **If it's missing or `installed: false`** → no vault. Proceed with the no-vault path (Step 3b). Optionally mention once that `/second-brain` can set up persistent continuity — don't nag.
+- **If it exists, `installed: true`, AND `vault_automation: enabled`** (Obsidian/markdown vaults) → note the `vault_path`, `log_file`, and `standing_page`. Proceed with the vault path (Step 3a).
+- **If it exists but `vault_automation: disabled`** (Drive/Notion) → the built-in vault-writing is Obsidian/markdown-native and stays off for this type. Proceed with the no-vault path (Step 3b), and mention once that saving to their Drive/Notion store would be a build-your-own (the vault skills are a template) — don't nag.
+- **If it's missing or `installed: false`** → no vault. Proceed with the no-vault path (Step 3b). Optionally mention once that `/second-brain` can set up persistent continuity (Obsidian recommended) — don't nag.
 
 ### Step 3a: Vault path — append a session log entry
 

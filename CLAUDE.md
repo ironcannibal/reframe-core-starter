@@ -59,14 +59,14 @@ See `EXPANSIONS.md` for what to add as you grow.
 
 ## Second Brain (optional)
 
-A **Second Brain** is a long-term knowledge vault the Reframe Core reads and writes — the place durable facts and session history live so they compound instead of evaporating. It's optional: everything here works without one. Run `/second-brain` to learn the concept, compare options (plain markdown, Obsidian, Google Drive, Notion), and set one up.
+A **Second Brain** is a long-term knowledge vault the Reframe Core reads and writes — the place durable facts and session history live so they compound instead of evaporating. It's optional: everything here works without one. Run `/second-brain` to learn the concept, compare options, and set one up. **Obsidian is the recommended choice** (free, private, markdown-native); the vault automation is built for Obsidian/local-markdown.
 
-**If a vault is configured** (`context/second-brain.md` exists with `installed: true`), two rules apply:
+**If an Obsidian/markdown vault is configured** (`context/second-brain.md` with `installed: true` and `vault_automation: enabled`), two rules apply:
 
 - **Lookup order:** (1) this file + memory first — always loaded. (2) Anything not covered here, check the vault. (3) Only then the web for general/external knowledge. The goal: memory and this file hold *pointers* to where things live, not the things themselves.
 - **Session continuity lives in the vault, not memory.** At the end of a substantive session, `/close-session` appends a short entry (decisions, lessons, next steps) to the vault log and updates the standing profile page directly — instead of spawning parallel memory files. Memory holds pointers; the content belongs in the vault.
 
-If no vault is configured, ignore this section — decisions go to `decisions/log.md` and durable facts to `context/`.
+If no vault is configured — or the vault is Drive/Notion (`vault_automation: disabled`) — ignore this section: decisions go to `decisions/log.md` and durable facts to `context/`, and the vault skills stand down.
 
 ## Knowledge base
 

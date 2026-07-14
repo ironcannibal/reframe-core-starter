@@ -28,7 +28,7 @@ The long-term knowledge layer, separate from the 7 operational domains above. Op
 |---|---|---|---|---|
 | Knowledge vault | | not yet connected | ○ | — |
 
-*Status flips to `✓` when `/second-brain` records a vault. Type `markdown`/`obsidian` → full `/vault-lint` support; `gdrive`/`notion` → continuity only, no automated lint.*
+*Status flips to `✓` when `/second-brain` records a vault. **Obsidian recommended.** Type `obsidian`/`markdown` → full support (`/close-session` + `/vault-lint` run). `gdrive`/`notion` → store only; the vault skills stay off (build-your-own).*
 
 The kit is API-first: prefer a direct CLI or API call (with the key in Doppler ... see [references/doppler-secrets.md](references/doppler-secrets.md)) over heavier middleware, and reach for an MCP only when there's no API path.
 

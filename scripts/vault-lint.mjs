@@ -46,9 +46,12 @@ function resolveVault() {
   if (!cfg || cfg.installed !== 'true') {
     return { skip: 'No Second Brain configured. Run /second-brain to set one up (it is optional).' };
   }
+  if (cfg.vault_automation && cfg.vault_automation.toLowerCase() === 'disabled') {
+    return { skip: `Second Brain vault_automation is disabled (type "${cfg.type}"). The vault skills are Obsidian/markdown-native — build your own lint for a Drive/Notion store if you want one.` };
+  }
   const type = (cfg.type || '').toLowerCase();
   if (type !== 'markdown' && type !== 'obsidian') {
-    return { skip: `Second Brain type "${cfg.type}" is not a local markdown/Obsidian vault — automated lint does not apply. Continuity via /close-session still works.` };
+    return { skip: `Second Brain type "${cfg.type}" is not a local markdown/Obsidian vault — automated lint does not apply. Set up Obsidian for full support.` };
   }
   if (!cfg.vault_path) {
     return { skip: 'context/second-brain.md is missing vault_path. Re-run /second-brain.' };

@@ -15,8 +15,8 @@ Keeps a knowledge vault healthy: finds orphan pages, broken links, contradiction
 
 ## Requirements
 
-- A Second Brain configured as `type: markdown` or `type: obsidian` in `context/second-brain.md` (local folders the script can walk).
-- Google Drive / Notion vaults get continuity via `/close-session` but **not** this automated structural lint. If that's the configured type, say so and stop.
+- A Second Brain configured as `type: obsidian` or `type: markdown` with `vault_automation: enabled` in `context/second-brain.md` (local folders the script can walk). This skill is Obsidian/markdown-native.
+- Google Drive / Notion vaults (`vault_automation: disabled`) are **not** supported here — the skill won't run. If someone wants lint on a Drive/Notion store, this skill is a template to build their own. If that's the configured type, say so and stop.
 
 ## What it is NOT
 
