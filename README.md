@@ -1,6 +1,6 @@
 # Reframe Core
 
-**A personal business operating system, running on Claude Code.**
+**A personal business operating system, running on Claude Code or ChatGPT.**
 
 *Powered by Business Reframing™ / Fresh Start Marketing.*
 
@@ -13,10 +13,12 @@ Originally based on Nate Herk's open-source **AIS-OS** starter kit (AI Automatio
 ## Getting started
 
 1. **Clone this repo** into a folder you'll work from.
-2. **Open it in Claude Code.**
+2. **Open it in Claude Code** (or in VS Code with ChatGPT via Codex; see [PORTING-CHATGPT.md](PORTING-CHATGPT.md)).
 3. **Run `/onboard`.** Answer 7 questions (about 10-15 minutes). It scaffolds your `context/`, `connections.md`, `references/voice.md`, and fills `CLAUDE.md`.
 4. **Day 7: run `/audit`** to see your Four Pillars score.
 5. **Day 14: run `/level-up`** to find and ship your first automation.
+
+> **On ChatGPT instead of Claude Code?** This kit runs on both. Install the Codex extension for VS Code, sign in with your ChatGPT account, and it reads the included `AGENTS.md` and runs the same skills. Full walkthrough: [PORTING-CHATGPT.md](PORTING-CHATGPT.md).
 
 Secrets (API keys, tokens) go in **Doppler**, never in a `.env` file or in code. New to Doppler? See [references/doppler-secrets.md](references/doppler-secrets.md).
 
