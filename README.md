@@ -74,6 +74,7 @@ The **three cornerstones** — security, ethics, privacy — are the trust band 
 | `/level-up` | Recurring thinking skill | Day 14, then weekly. Three Ms interview (Mindset → Method → Machine). One run = one shipped artifact. |
 | `/sop` | On demand | Draft a structured SOP from a free-form description. |
 | `/roast` | On demand | 5-persona council stress-tests an idea → one GO / RESHAPE / KILL verdict + the cheapest 48h test. Use before building the wrong thing. |
+| `/escalate` | When you're stuck | Packages this session, your project state, your connections, and your own note into one markdown file, strips every secret, and sends it to whoever supports your install. Written to be uploaded straight into their AI. |
 | `/second-brain` | Optional, on demand | Learn what a knowledge vault is, compare options (markdown / Obsidian / Drive / Notion), and install one if you want. Off by default. |
 | `/close-session` | End of session | Saves decisions and durable facts to your Second Brain vault (if set up) or to `decisions/log.md` + `context/`. Nothing worth keeping dies with the chat window. |
 | `/vault-lint` | Periodic | Health check for a markdown/Obsidian Second Brain — orphans, broken links, contradictions. No-ops cleanly if no vault is configured. |
@@ -96,6 +97,7 @@ reframe-core/
 ├── aios-intake.md                   ← Source-of-truth for /onboard. Edit + re-run any time.
 ├── connections.md                   ← Registry of every system your Reframe Core can reach
 ├── context/                         ← About you, your business (filled by /onboard)
+│   ├── support.md                   ← Who supports this install; where /escalate sends
 │   └── second-brain.md              ← (optional) vault config, written by /second-brain
 ├── references/
 │   ├── 3ms-framework.md             ← The operator brain
@@ -105,6 +107,7 @@ reframe-core/
 │   └── vault-lint.mjs               ← Deterministic vault scan (used by /vault-lint)
 ├── decisions/
 │   └── log.md                       ← Append-only record of what was decided and why
+├── escalations/                     ← Packets written by /escalate
 ├── archives/                        ← Old stuff. Don't delete. Move here.
 └── .claude/
     └── skills/
@@ -113,6 +116,8 @@ reframe-core/
         ├── level-up/SKILL.md
         ├── sop/SKILL.md
         ├── roast/SKILL.md
+        ├── escalate/SKILL.md
+        ├── escalate/packet-template.md
         ├── second-brain/SKILL.md    ← optional module
         ├── close-session/SKILL.md   ← optional module
         └── vault-lint/SKILL.md      ← optional module

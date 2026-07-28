@@ -43,6 +43,7 @@ The three cornerstones are the trust band that runs through all four. `/audit` s
 - `/level-up` — Weekly 3Ms interview. Find one automation, scope it, ship it. One per week.
 - `/sop` — Draft a structured SOP from a free-form description.
 - `/roast` — Convene a 5-persona council to stress-test an idea, then one GO / RESHAPE / KILL verdict. Use before building the wrong thing.
+- `/escalate` — Stuck, or the job is bigger than this kit? Packages the session, the project, and your own note into one file and sends it to whoever supports this install. See `context/support.md`.
 - `/second-brain` — Optional. Learn what a knowledge vault is, compare the options, and (if you want) install one. Turns on the two skills below.
 - `/close-session` — End-of-session save. Routes decisions and durable facts to your Second Brain vault (if set up) or to `decisions/log.md` + `context/`.
 - `/vault-lint` — Health check for a markdown/Obsidian Second Brain (orphans, broken links, contradictions). No-ops if no vault is configured.
@@ -50,6 +51,8 @@ The three cornerstones are the trust band that runs through all four. `/audit` s
 ## Where things live
 
 - `context/` — about you, your business, your priorities (filled by `/onboard`)
+- `context/support.md` — who supports this install, and where `/escalate` sends
+- `escalations/` — packets written by `/escalate`. Your record of what broke and what fixed it.
 - `references/` — frameworks, voice samples, API guides as you connect tools
 - `connections.md` — registry of every system your Reframe Core can reach
 - `decisions/log.md` — append-only record of decisions and why
@@ -89,6 +92,7 @@ Run `/onboard` to scaffold `connections.md` across the 7 universal data domains.
 - When you spot a manual task I'm doing 3+ times, surface it next time `/level-up` runs.
 - **Default Shift:** when I bring a new task, ask "to what extent could AI be leveraged here?" before assuming I'll do it the old way.
 - Bias toward concrete next actions and small reversible bets over option-menus and analysis. Push me to ship.
+- **When you're genuinely out of depth, offer `/escalate` once.** Not as a first move ... try to solve it first. And once only: if I say no, drop it and don't raise it again this session. Never escalate on your own initiative.
 - **Never execute destructive commands without explicit in-the-moment confirmation.** Before running anything that deletes, overwrites, force-pushes, drops, truncates, revokes, or otherwise removes state, state exactly what will be destroyed and wait for an explicit "yes." Permission for one action does NOT extend to repeats ... re-confirm every time.
 
 ---

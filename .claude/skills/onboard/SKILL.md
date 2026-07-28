@@ -84,11 +84,12 @@ Once the intake is complete, generate these files (or update if re-running). Bac
 3. **`context/priorities.md`** — from Q3. Numbered list, one line per priority.
 4. **`references/voice.md`** — from Q2. Paste samples verbatim with a short header explaining their use ("Match this register when drafting; don't fake voice on external content without showing me first").
 5. **`connections.md`** — populate the 7-row table from Q4-Q7 answers. Each row gets `mechanism: not yet connected`, `auth: —`, `last checked: —`. The user wires connections on Day 2.
-6. **`CLAUDE.md`** — fill all `{{...}}` placeholders. Substitute the user's name, stated priority, voice register summary, and a brief connections summary. **Title and every self-reference use `install_name` from Step 0** (default `Reframe Core`). Include a **Three cornerstones** section (Security / Ethics / Privacy) reflecting the Step-0 choice: kept cornerstones are written as design-time defaults the client opted into ("every build decision passes through these three lenses at design time, not as an afterthought"); any overridden ones are noted as off by the client's explicit choice. Link the cornerstone SOPs (`references/ai-ethics-sop.md`, `references/privacy-sop.md`) when they ship in the install.
+6. **`context/support.md`** — if it doesn't exist, write it from the kit defaults (Fresh Start Marketing / `mike@freshstarts.io`). If it does exist, leave it alone ... whoever installed this kit may have already set themselves as the support contact. Mention in one line that `/escalate` uses it.
+7. **`CLAUDE.md`** — fill all `{{...}}` placeholders. Substitute the user's name, stated priority, voice register summary, and a brief connections summary. **Title and every self-reference use `install_name` from Step 0** (default `Reframe Core`). Include a **Three cornerstones** section (Security / Ethics / Privacy) reflecting the Step-0 choice: kept cornerstones are written as design-time defaults the client opted into ("every build decision passes through these three lenses at design time, not as an afterthought"); any overridden ones are noted as off by the client's explicit choice. Link the cornerstone SOPs (`references/ai-ethics-sop.md`, `references/privacy-sop.md`) when they ship in the install.
 
 ### Step 4: The closing screen
 
-Print one screen. Three lines max:
+Print one screen. Three action lines, then the two standing offers (support, second brain). Nothing else:
 
 ```
 ✓ Day 1 done. Your {install_name} knows who you are, what you sell, what matters this quarter, and how you sound.
@@ -96,6 +97,8 @@ Print one screen. Three lines max:
 Today: ask me — "what should I focus on this week?"
 Tomorrow: pick one tool from connections.md and wire it up (manual MCP install or write a small API script + save references/{tool}-api.md).
 Day 7: run /audit to see your score.
+
+Stuck at any point: run /escalate. It packages up what you were doing and sends it to {support_contact}. You review every line before it goes.
 
 Optional: want your knowledge and session history to persist and compound? Run /second-brain — it explains the idea, compares the options, and sets one up only if you want it. No pressure; the kit works fine without it.
 ```
@@ -115,8 +118,8 @@ The Default Shift question seeds the Mindset framework before `/level-up` formal
 2. **Voice paste cannot be skipped.** If the user types samples mid-chat, refuse and tell them to paste from real writing.
 3. **One-shot scaffold.** After Step 2 ends, write Step 3 files in a single batch. No multi-turn confirmation. The user iterates by editing `aios-intake.md` and re-running.
 4. **Idempotent.** Re-running with an edited intake refreshes context files; backs up originals to `archives/intake-{ts}/`. Skips questions already answered unless the user wants to revise.
-5. **Closing screen is three lines.** Not a menu.
-6. **No extra skills generated.** Don't scaffold `/today`, `/draft`, `/connect`, etc. The kit ships 3 skills; the user authors more via `/level-up`.
+5. **Closing screen is three action lines plus the two standing offers.** Not a menu.
+6. **No extra skills generated.** Don't scaffold `/today`, `/draft`, `/connect`, etc. The kit ships the skills it ships; the user authors more via `/level-up`.
 7. **Read-only on `references/3ms-framework.md`.** It already ships in the kit. Don't overwrite.
 8. **No secrets on Day 1.** Don't ask for API keys during onboarding ... connections come Day 2. When keys do land, they go in Doppler, never in `.env`. See `references/doppler-secrets.md`.
 9. **Step 0 runs first.** Name the install + set the cornerstones before the interview. Naming is NOT one of the 7 questions — it's setup framing, so it doesn't touch the 7-cap.
