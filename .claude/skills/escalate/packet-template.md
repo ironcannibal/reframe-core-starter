@@ -169,6 +169,10 @@ You are being handed a **Reframe Core escalation packet**. Someone running a Ref
 
 *If a detail below looks missing, it was probably a credential. Ask for it over a secure channel — never in a reply to this packet.*
 
+{{#IF_EXPOSED_CREDENTIALS}}
+**Flagging for the operator, not just the supporter:** {{WHAT_WAS_EXPOSED_AND_WHERE}}. Redacting it from this packet fixed the packet, not the repo. Rotate those credentials and move them out, regardless of how this escalation resolves.
+{{/IF_EXPOSED_CREDENTIALS}}
+
 ---
 
 ## 11. Next step requested

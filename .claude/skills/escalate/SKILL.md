@@ -130,6 +130,8 @@ Whatever comes back goes into the packet **unedited**, in its own block, under t
 
 Replace each with `[REDACTED: {what it was}]` and log the swap. **If you are unsure whether something is a secret, redact it.** A missing detail costs one email. A leaked key costs a lot more.
 
+**Then tell the operator what you found.** If a live credential was sitting somewhere it shouldn't be ... a git-tracked file, a plaintext note, a password in `connections.md` ... that's a security problem in their install whether or not this escalation ever gets sent. Say so plainly, name the file, and tell them to rotate it. Redacting it from the packet fixed the packet, not the repo. Put the same note in the packet's redaction section so the person on the other end knows to follow up.
+
 Then print the data inventory:
 
 ```
