@@ -101,6 +101,10 @@ reframe-core/
 │   └── second-brain.md              ← (optional) vault config, written by /second-brain
 ├── references/
 │   ├── 3ms-framework.md             ← The operator brain
+│   ├── security-sop.md              ← Cornerstone 1: threat model, secrets, blast radius, client access
+│   ├── ai-ethics-sop.md             ← Cornerstone 2: disclosure, human gates, vendor approval
+│   ├── privacy-sop.md               ← Cornerstone 3: data inventory, consent, retention, breach
+│   ├── prompt-injection-sop.md      ← Untrusted text reaching an LLM, in depth
 │   ├── doppler-secrets.md           ← How secrets work here (Doppler, never .env)
 │   └── api-setup-template.md        ← Template for documenting each API you wire
 ├── scripts/

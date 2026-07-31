@@ -2,7 +2,7 @@
 
 **Status:** Template | **Owner:** you | **Applies to:** every project that lets external text reach an LLM prompt. | **Last updated:** YYYY-MM-DD
 
-Companion to [ai-ethics-sop.md](ai-ethics-sop.md) ... principle 7 lives here in detail.
+Companion to [ai-ethics-sop.md](ai-ethics-sop.md) ... principle 7 lives here in detail. The wider security picture (threat model, attack surface, blast radius) is in [security-sop.md](security-sop.md).
 
 The short version: **the database is the choke point.** If untrusted text gets stored without being labeled, every future workflow that reads it can be tricked. Tag it at ingest, wrap it at consume, schema-validate the output.
 

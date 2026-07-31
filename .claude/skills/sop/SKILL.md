@@ -24,7 +24,7 @@ L2 autonomy: AI drafts, you review and edit before it counts as shipped.
 
 - Your free-form description (required, from the invocation)
 - `references/voice.md` (voice match — always)
-- `references/ai-ethics-sop.md`, `references/privacy-sop.md`, `references/prompt-injection-sop.md` — read **only** when the SOP touches their domain AND the file exists (see Step 2)
+- `references/security-sop.md`, `references/ai-ethics-sop.md`, `references/privacy-sop.md`, `references/prompt-injection-sop.md` — read **only** when the SOP touches their domain AND the file exists (see Step 2)
 - Existing SOPs in `references/sops/*.md` — read as style examples when present
 
 ## Process

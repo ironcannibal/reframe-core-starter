@@ -2,6 +2,8 @@
 
 **Status:** Template | **Owner:** you | **Audience:** you + any contractors/hires | **Last updated:** YYYY-MM-DD
 
+Companion to [security-sop.md](security-sop.md) and [privacy-sop.md](privacy-sop.md). Where those cover **the systems** and **the data**, this covers **how you use AI on it**. One specific attack class gets its own doc: [prompt-injection-sop.md](prompt-injection-sop.md).
+
 > This is a starter template. The principles and checklist are ready to use as-is. The tables in sections 3 and 6 are blank ... fill them in as you ship AI-touching systems and approve vendors.
 
 ---

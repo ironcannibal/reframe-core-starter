@@ -2,7 +2,7 @@
 
 **Status:** Template | **Owner:** you | **Audience:** you + any contractors/hires | **Last updated:** YYYY-MM-DD
 
-Companion to [ai-ethics-sop.md](ai-ethics-sop.md) and [prompt-injection-sop.md](prompt-injection-sop.md). Where those cover **how you use AI on data**, this covers **the data itself** ... what you collect, why, where it lives, how long, who sees it, and what you owe the person it's about.
+Companion to [security-sop.md](security-sop.md), [ai-ethics-sop.md](ai-ethics-sop.md) and [prompt-injection-sop.md](prompt-injection-sop.md). Where those cover **how you use AI on data**, this covers **the data itself** ... what you collect, why, where it lives, how long, who sees it, and what you owe the person it's about.
 
 > Items marked `[SET YOUR DEFAULT]` are placeholders. Pick a number that fits your business and obligations (entering an EU/CA market may force sharper ones ... e.g., a 72-hour breach-notification window).
 
@@ -28,7 +28,7 @@ Companion to [ai-ethics-sop.md](ai-ethics-sop.md) and [prompt-injection-sop.md](
 2. **Purpose limitation** ... data collected for X isn't repurposed for Y without a fresh basis.
 3. **Lawful basis** ... every collection has one of three: consent, contract, or legitimate interest. Document legitimate-interest cases in section 5.
 4. **Subject rights** ... anyone can ask what you have, get a copy, or have it deleted (regardless of jurisdiction). Section 5.
-5. **Security by default** ... see the security cornerstone in `CLAUDE.md`. Encryption at rest and in transit, secrets in Doppler not in code, MFA on all data-bearing accounts.
+5. **Security by default** ... see [security-sop.md](security-sop.md). Encryption at rest and in transit, secrets in Doppler not in code, MFA on all data-bearing accounts.
 6. **Vendor-as-extension** ... when a vendor holds your data, their privacy is your privacy. Every storage/processing vendor appears in section 7 with a DPA or equivalent. Free consumer tiers never see customer data.
 7. **Deletion-as-default** ... every data class has a retention period and an automated end. "Keep it forever just in case" is the wrong default.
 8. **Decommissioning is part of the lifecycle** ... when a product is parked, its data doesn't get to coast. Delete, archive offline, or scrub PII and keep as a demo. Section 9.

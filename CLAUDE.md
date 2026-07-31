@@ -15,7 +15,7 @@ Read `references/3ms-framework.md` once. It's a way of thinking about AI work. M
 
 Every build decision passes through three lenses, at design time, not as an afterthought. They're the discipline that separates serious AI work from cheap AI implementation. If a proposal doesn't address all three, it isn't done.
 
-1. **Security** — threat model, secrets handling (secrets live in Doppler, never in `.env` ... see `references/doppler-secrets.md`), failure modes, attack surface. Untrusted text reaching an LLM: see `references/prompt-injection-sop.md`.
+1. **Security** — threat model, attack surface, secrets handling (secrets live in Doppler, never in `.env` ... see `references/doppler-secrets.md`), failure modes, blast radius, client minimum-access. See `references/security-sop.md`; paste its section-8 checklist into every PRD. Untrusted text reaching an LLM: see `references/prompt-injection-sop.md`.
 2. **Ethics** — who could be harmed, disclosure, human-in-the-loop, honesty, minimization. See `references/ai-ethics-sop.md`; paste its section-4 checklist into every PRD.
 3. **Privacy** — data inventory, consent, subject rights, retention, decommissioning, breach response. See `references/privacy-sop.md`.
 

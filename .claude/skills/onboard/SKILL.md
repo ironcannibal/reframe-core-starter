@@ -27,7 +27,7 @@ Default to `Reframe Core` if they don't care. Record as `install_name` in the Se
 
 **B. The three cornerstones — ON by default.** State them, don't bury them:
 > *"This install ships with three cornerstones turned ON. Every build decision gets checked against them at design time, not bolted on after:*
-> *1. **Security** — secrets handling, attack surface, failure modes.*
+> *1. **Security** — secrets handling, attack surface, failure modes. See `references/security-sop.md`.*
 > *2. **Ethics** — fairness, honesty, who could be harmed. See `references/ai-ethics-sop.md`.*
 > *3. **Privacy** — data inventory, consent, retention, subject rights. See `references/privacy-sop.md`.*
 > *This is your install, so you can override any of them. Keep all three as your defaults, or change any now?"*
@@ -85,7 +85,7 @@ Once the intake is complete, generate these files (or update if re-running). Bac
 4. **`references/voice.md`** — from Q2. Paste samples verbatim with a short header explaining their use ("Match this register when drafting; don't fake voice on external content without showing me first").
 5. **`connections.md`** — populate the 7-row table from Q4-Q7 answers. Each row gets `mechanism: not yet connected`, `auth: —`, `last checked: —`. The user wires connections on Day 2.
 6. **`context/support.md`** — if it doesn't exist, write it from the kit defaults (Fresh Start Marketing / `mike@freshstarts.io`). If it does exist, leave it alone ... whoever installed this kit may have already set themselves as the support contact. Mention in one line that `/escalate` uses it.
-7. **`CLAUDE.md`** — fill all `{{...}}` placeholders. Substitute the user's name, stated priority, voice register summary, and a brief connections summary. **Title and every self-reference use `install_name` from Step 0** (default `Reframe Core`). Include a **Three cornerstones** section (Security / Ethics / Privacy) reflecting the Step-0 choice: kept cornerstones are written as design-time defaults the client opted into ("every build decision passes through these three lenses at design time, not as an afterthought"); any overridden ones are noted as off by the client's explicit choice. Link the cornerstone SOPs (`references/ai-ethics-sop.md`, `references/privacy-sop.md`) when they ship in the install.
+7. **`CLAUDE.md`** — fill all `{{...}}` placeholders. Substitute the user's name, stated priority, voice register summary, and a brief connections summary. **Title and every self-reference use `install_name` from Step 0** (default `Reframe Core`). Include a **Three cornerstones** section (Security / Ethics / Privacy) reflecting the Step-0 choice: kept cornerstones are written as design-time defaults the client opted into ("every build decision passes through these three lenses at design time, not as an afterthought"); any overridden ones are noted as off by the client's explicit choice. Link the cornerstone SOPs (`references/security-sop.md`, `references/ai-ethics-sop.md`, `references/privacy-sop.md`) when they ship in the install.
 
 ### Step 4: The closing screen
 
