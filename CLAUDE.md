@@ -43,6 +43,7 @@ The three cornerstones are the trust band that runs through all four. `/audit` s
 - `/level-up` — Weekly 3Ms interview. Find one automation, scope it, ship it. One per week.
 - `/sop` — Draft a structured SOP from a free-form description.
 - `/roast` — Convene a 5-persona council to stress-test an idea, then one GO / RESHAPE / KILL verdict. Use before building the wrong thing.
+- `/forge` — Build a new skill. Say `/forge` plus what it should do; it interviews you, drafts, verifies, and writes `.claude/skills/<name>/`. For anything you do the same way 3+ times.
 - `/escalate` — Stuck, or the job is bigger than this kit? Packages the session, the project, and your own note into one file and sends it to whoever supports this install. See `context/support.md`.
 - `/second-brain` — Optional. Learn what a knowledge vault is, compare the options, and (if you want) install one. Turns on the two skills below.
 - `/close-session` — End-of-session save. Routes decisions and durable facts to your Second Brain vault (if set up) or to `decisions/log.md` + `context/`.
