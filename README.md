@@ -74,6 +74,7 @@ The **three cornerstones** — security, ethics, privacy — are the trust band 
 | `/level-up` | Recurring thinking skill | Day 14, then weekly. Three Ms interview (Mindset → Method → Machine). One run = one shipped artifact. |
 | `/sop` | On demand | Draft a structured SOP from a free-form description. |
 | `/roast` | On demand | 5-persona council stress-tests an idea → one GO / RESHAPE / KILL verdict + the cheapest 48h test. Use before building the wrong thing. |
+| `/grill` | On demand | For when you know what you need but can't describe or spec it. One question at a time, each answer written down as you go, then a one-page spec you can build from. |
 | `/forge` | On demand | Build a new skill. Interviews you, drafts it with a small team of worker agents, verifies it, and writes a ready-to-test `.claude/skills/<name>/`. Use for anything you do the same way 3+ times. |
 | `/escalate` | When you're stuck | Packages this session, your project state, your connections, and your own note into one markdown file, strips every secret, and sends it to whoever supports your install. Written to be uploaded straight into their AI. |
 | `/second-brain` | Optional, on demand | Learn what a knowledge vault is, compare options (markdown / Obsidian / Drive / Notion), and install one if you want. Off by default. |
@@ -121,6 +122,7 @@ reframe-core/
         ├── level-up/SKILL.md
         ├── sop/SKILL.md
         ├── roast/SKILL.md
+        ├── grill/SKILL.md           ← turns a vague need into a one-page spec
         ├── forge/SKILL.md           ← builds new skills (+ conventions.md, skill-template.md)
         ├── escalate/SKILL.md
         ├── escalate/packet-template.md

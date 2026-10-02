@@ -14,8 +14,8 @@ slash-command menu here, so when the operator types `/<name>` (for example
 `/onboard`, `/audit`, `/level-up`) OR asks for that skill by name, open
 `.claude/skills/<name>/SKILL.md` and follow it step by step.
 
-Available skills: `onboard`, `audit`, `level-up`, `sop`, `roast`, `escalate`,
-`second-brain`, `close-session`, `vault-lint`. Start with `/onboard`.
+Available skills: `onboard`, `audit`, `level-up`, `sop`, `roast`, `grill`, `forge`,
+`escalate`, `second-brain`, `close-session`, `vault-lint`. Start with `/onboard`.
 
 Stuck on something this kit can't solve? `/escalate` packages the session and sends
 it to whoever supports this install (see `context/support.md`).
